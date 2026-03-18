@@ -271,6 +271,9 @@ globalkeys = gears.table.join(
               {description = "focus the previous screen", group = "screen"}),
     awful.key({ modkey,           }, "u", awful.client.urgent.jumpto,
               {description = "jump to urgent client", group = "client"}),
+    awful.key({ modkey, "Ctrl" }, "l", function() awful.util.spawn("slock") end),
+    awful.key({ modkey, "Ctrl" }, "z", function() awful.util.spawn("zen-browser") end),
+    awful.key({ modkey, "Ctrl" }, "s",function() awful.util.spawn("bash -ic 'myscrot --select'") end),
     awful.key({ modkey,           }, "Tab",
         function ()
             awful.client.focus.history.previous()
